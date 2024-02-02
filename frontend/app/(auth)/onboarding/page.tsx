@@ -8,18 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 
-interface Props {
-    user: {
-        id: string;
-        objectId: string;
-        username: string;
-        name: string;
-        bio: string;
-        image: string;
-        isRegistered: boolean;
-    };
-    btnTitle: string;
-}
+
 
 interface FormValues {
     username: string;
