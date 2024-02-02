@@ -15,7 +15,7 @@ interface FormValues {
     bio: string;
 }
 
-const Page: React.FC<Props> = ({ user, btnTitle }: Props) => {
+const Page: React.FC<> = ({ user, btnTitle }: Props) => {
     const [isUserRegistered, setIsUserRegistered] = useState<boolean | null>(null);
     const { register, handleSubmit } = useForm<FormValues>();
     const checkUserRegistration = async () => {
