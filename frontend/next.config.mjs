@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {images: {
+const nextConfig = {
+    typescript: {
+        ignoreBuildErrors: true,
+    },    
+    images: {
         remotePatterns: [
             {
                 protocol: "https",

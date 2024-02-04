@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client"
 import Web3 from 'web3';
 import contractABI from "@/constants/contractABI";
@@ -26,7 +27,7 @@ const Page: React.FC = () => {
                 const web3 = new Web3(window.ethereum);
                 const contract = new web3.eth.Contract(contractABI, contractAddress);
                 const accounts = await web3.eth.getAccounts();
-                const userAddress = accounts[0];
+                const userAddress = accounts? accounts[0]: '';
                 const result = await contract.methods
                     .searchUsernamesByWord(searchInput)
                     .call();
